@@ -10,8 +10,9 @@ class Consulta():
         ...
         
     def login(self):
+        user = input('user: ')
+        pwd = input('pwd: ')
         r = requests.get('https://db-geradorqr-default-rtdb.firebaseio.com/login.json')
-        print(r.text)
 
     def cadastroUser(self, user, pwd, server):
         d = {'user':user,
