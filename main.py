@@ -48,16 +48,21 @@ class Consulta():
     def cadastroUser(self, user, pwd, server):
         d = {'user':user, 'server':server, 'pwd':pwd}
         dados = requests.get('https://db-geradorqr-default-rtdb.firebaseio.com/.json')
-        
+        dados = json.loads(dados.text)
+        dados = dados['login']
+
         for i in dados:
-            users = dados[i]
-            if user == users['user']:
+            key = dados[i]
+            if user == key['user']:
                 # LOGIN ATUALIZADO 
-                r = requests.patch(f'https://db-geradorqr-default-rtdb.firebaseio.com/login/{i}/.json', json={'pwd':pwd, 'server':server})
-            else:
+                r = requests.patch(f'https://db-geradorqr-default-rtdb.firebaseio.com/login/{i}/.json', json=d)
+                print(r.text)
+                break
+            # else:
                 # LOGIN REALIZADO
-                r = requests.post(f'https://db-geradorqr-default-rtdb.firebaseio.com/login.json', json=d)
+                # r = requests.post(f'https://db-geradorqr-default-rtdb.firebaseio.com/login.json', json=d)
+                # break
         
 c = Consulta()
         
-c.cadastroUser(user='guilherme.breve', pwd='8458', server='10.56.6.56')
+c.cadastroUser(user='testeAdd', pwd='Tetse', server='10.56.6.56')
