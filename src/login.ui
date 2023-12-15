@@ -42,9 +42,10 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="Login">
       <property name="styleSheet">
        <string notr="true">QFrame{
+border:0;
 background:black;}</string>
       </property>
       <property name="frameShape">
@@ -72,7 +73,7 @@ background:black;}</string>
        <item>
         <widget class="QFrame" name="TOP">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">border:0;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -91,7 +92,7 @@ background:black;}</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">border:0;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -104,8 +105,8 @@ background:black;}</string>
            <widget class="QFrame" name="MAIN_2">
             <property name="minimumSize">
              <size>
-              <width>0</width>
-              <height>0</height>
+              <width>300</width>
+              <height>400</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -180,17 +181,22 @@ color: white;
             <widget class="QLabel" name="titulo">
              <property name="geometry">
               <rect>
-               <x>20</x>
+               <x>30</x>
                <y>10</y>
-               <width>251</width>
-               <height>16</height>
+               <width>240</width>
+               <height>31</height>
               </rect>
              </property>
              <property name="font">
               <font>
                <family>Segoe UI Semibold</family>
-               <pointsize>12</pointsize>
+               <pointsize>14</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: white;
+border: 0;
+</string>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -211,14 +217,20 @@ color: white;
             <widget class="QLabel" name="label_2">
              <property name="geometry">
               <rect>
-               <x>120</x>
-               <y>70</y>
-               <width>47</width>
-               <height>13</height>
+               <x>100</x>
+               <y>50</y>
+               <width>91</width>
+               <height>91</height>
               </rect>
              </property>
              <property name="text">
-              <string>img</string>
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap>img/icons8-lupa-48.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
              </property>
             </widget>
             <widget class="QLineEdit" name="entryPwd_2">
@@ -343,7 +355,7 @@ border: 0;</string>
               <string>Ctrl+S</string>
              </property>
             </widget>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="btnLogin">
              <property name="geometry">
               <rect>
                <x>100</x>
@@ -380,7 +392,7 @@ border: 0;</string>
        <item>
         <widget class="QFrame" name="BOT">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">border:0;</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>

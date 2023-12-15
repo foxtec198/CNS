@@ -1,11 +1,7 @@
-use dw_vista
-SELECT T.[Status], T.Nome, T.TerminoReal, R.Recurso as Supervisor, Es.Descricao as 'Local' 
-from FT_TAREFA T
-inner join DM_ESTRUTURA Es on Es.Id_Estrutura = T.Id_Estrutura
-inner join FT_CHECKLIST_RESPOSTA_FULL R on R.TarefaId = T.Id
-inner join DM_SERVICO Sv on Sv.Id_Servico = T.Id_Servico
-where Es.CRno = 42636
-and Sv.Servico LIKE '%VISITA%'
-and MONTH(TerminoReal) >= 8
-and MONTH(TerminoReal) <= 10
-ORDER BY TerminoReal DESC
+select T.Nome, R.Recurso, T.TerminoReal, R.PerguntaDescricao, R.Conteudo as 'Resposta'
+from DW_Vista.dbo.FT_TAREFA T
+inner join DW_Vista.dbo.FT_CHECKLIST_RESPOSTA_FULL R on R.TarefaId = T.Id
+where T.Id = '05528461-54c4-4b2d-af23-d89ed47dbb71'
+or T.Id = '69fbdfc5-7642-4369-bd77-e873201545da'
+
+

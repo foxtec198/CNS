@@ -1,7 +1,6 @@
-from PyQt5 import QtWidgets as qw, uic
 from pyodbc import connect
 import requests, json
-from os import system
+from tkinter import messagebox as msg
 
 class Consulta():
     def __init__(self):
@@ -12,12 +11,14 @@ class Consulta():
         ...
 
     def DB(self):
-        self.conex = connect(f"DRIVER = SQL Driver;SERVER = {self.server}; UID = {self.user}; PWD = {self.pwd}")
+        driver = '{SQL Server}'
+        strConn = f"DRIVER={driver}; SERVER={self.server}; UID={self.user}; PWD={self.pwd}"
+        self.conex = connect(strConn)
         self.c = self.conex.cursor()
         
     def login(self):
-        user = input('user: ')
-        passw = input('pwd: ')
+        user = 'guilherme.breve'
+        passw = '8458@Guilherme'
         r = requests.get('https://db-geradorqr-default-rtdb.firebaseio.com/.json')
         d = json.loads(r.text)
         d = d['login']
@@ -30,7 +31,7 @@ class Consulta():
                 self.pwd = users['pwd']
                 if self.pwd == passw:
                     self.xSenha = 0
-                    print('Logado com sucesso')
+                    msg('Login','Logado com sucesso')
                     self.DB()
                     break
                 else:
@@ -66,7 +67,12 @@ class Consulta():
                 r = requests.post(f'https://db-geradorqr-default-rtdb.firebaseio.com/login.json', json=d)
                 print('LOGIN REALIZADO')
                 break
+    
+    def CRs(self):
+        self.login()
+        self.contratos = self.c.execute("SELECT DISTINCT Nivel_03 FROM DW_Vista.dbo.DM_Estrutura").fetchall()
+        self.servicos = self.c.execute("SELECT DISTINCT Servico FROM DW_Vista.dbo.DM_Servico").fetchall()
+        self.gerentes = self.c.execute("SELECT DISTINCT Gerente FROM DW_Vista.dbo.DM_CR").fetchall()
+        self.regionais = self.c.execute("SELECT DISTINCT DiretorRegional FROM DW_Vista.dbo.DM_CR").fetchall()
 
-c = Consulta()
-        
-c.login()
+c = Consulta().login()
