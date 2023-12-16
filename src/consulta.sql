@@ -1,7 +1,21 @@
-select T.Nome, R.Recurso, T.TerminoReal, R.PerguntaDescricao, R.Conteudo as 'Resposta'
-from DW_Vista.dbo.FT_TAREFA T
-inner join DW_Vista.dbo.FT_CHECKLIST_RESPOSTA_FULL R on R.TarefaId = T.Id
-where T.Id = '05528461-54c4-4b2d-af23-d89ed47dbb71'
-or T.Id = '69fbdfc5-7642-4369-bd77-e873201545da'
-
-
+-- SELECT top 1
+-- T.Numero,
+-- T.Nome,
+-- S.Servico,
+-- R.Recurso AS 'COLABORADOR',
+-- CR.Gerente,
+-- T.InicioReal,
+-- T.TerminoReal,
+-- T.Disponibilizacao,
+-- ES.Descricao AS 'Local',
+-- R.PerguntaDescricao AS 'Pergunta',
+-- R.Conteudo AS 'Resposta',
+-- E.Longitude_F,
+-- E.Latitude_F,
+-- ES.HIERARQUIADESCRICAO AS 'ESTRUTURA COMPLETA'
+-- FROM DW_VISTA.DBO.FT_TAREFA T WITH(NOLOCK)
+-- INNER JOIN DW_VISTA.DBO.FT_CHECKLIST_RESPOSTA_FULL R ON R.TarefaId = T.Id
+-- INNER JOIN DW_VISTA.DBO.DM_EXECUCAO E ON E.TarefaId = T.Id
+-- INNER JOIN DW_VISTA.DBO.DM_ESTRUTURA ES ON ES.Id_Estrutura = T.Id_Estrutura
+-- INNER JOIN DW_VISTA.DBO.DM_CR CR ON CR.Id_CR = ES.Id_CR
+-- inner JOIN DW_VISTA.DBO.DM_SERVICO S ON S.Id_Servico = T.Id_Servico
