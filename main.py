@@ -11,7 +11,8 @@ class Consulta():
         self.numeroDeTentativas = 3
         self.conn = sq('src/temp.db')
         self.cursor = self.conn.cursor()
-        self.valor = 0
+        self.valor = 10
+        self.valorMain = 10
         set()
         self.year = int(st('%Y'))
         self.month = int(st('%m'))
@@ -81,23 +82,31 @@ class Consulta():
         for i in c.servicos:
             boxServico.addItems(i)
         self.addValue()
+    
+    def zerar(self):
+        tab.setRowCount(0)
             
     def consulta(self):
+        mainBar.show()
         cr = boxCr.currentText()
         if cr != '':
             servico = boxServico.currentText()
-            
+            self.addValueBarMain()
+
             dataI = str(di.date())
             dataI = dataI[18:]
             dataI = dataI.replace('(','[')
             dataI = dataI.replace(')',']')
             dataI = json.loads(dataI)
+            self.addValueBarMain()
 
             dataF = str(df.date())
             dataF = dataF[18:]
             dataF = dataF.replace('(','[')
             dataF = dataF.replace(')',']')
             dataF = json.loads(dataF)
+            self.addValueBarMain()
+            
             cons = self.cursorSQL.execute(f"""SELECT
             T.Numero,
             T.Nome,
@@ -128,7 +137,10 @@ class Consulta():
             
             AND YEAR(DISPONIBILIZACAO) >= {dataI[0]} 
             AND YEAR(DISPONIBILIZACAO) <= {dataF[0]} """)
+            self.addValueBarMain()
             self.tabela = cons.fetchall()
+            self.addValueBarMain()
+
             
             if servico != '':
                 for row in self.tabela:
@@ -141,6 +153,7 @@ class Consulta():
                 x = 0
                 for i in self.tabela:
                     x += 1
+                    self.addValueBarMain()
                 tab.setRowCount(x)
                 linhas.setText(f'{x} Linhas')
                 row = 0
@@ -148,6 +161,8 @@ class Consulta():
                     for c in range(0,14):
                         self.addTab(row, c, r[c])
                     row += 1
+                    self.addValueBarMain()
+                mainBar.hide()
             else:
                 self.msg(main, 'Valores não encontrados! Tente novamente')
         else:
@@ -159,6 +174,13 @@ class Consulta():
     def addValue(self):
         bar.setValue(self.valor)
         self.valor += 10
+        
+    def addValueBarMain(self):
+        mainBar.setValue(self.valorMain)
+        self.valorMain += 10
+
+    def salvar(self):
+        ...
         
 app = qw.QApplication([])
 c = Consulta()
@@ -172,6 +194,7 @@ df = main.dataFinal
 di = main.dataInicial
 tab = main.tableCons
 linhas = main.totalLinhas
+mainBar = main.mainBar
 
 entry_saveUser = login.saveUser
 entry_server = login.entryServer
@@ -183,8 +206,10 @@ frameTop = login.TOP
 
 # CALLBACK
 login.btnLogin.clicked.connect(c.login)
+main.btnLimparTabela.clicked.connect(c.zerar)
 main.btnLimpar.clicked.connect(c.clear)
 main.btnConsulta.clicked.connect(c.consulta)
+main.btnExcel.clicked.connect(c.salvar)
 
 dados = c.cursor.execute('SELECT * FROM temp ORDER BY Id DESC').fetchone()
 if dados != None:
@@ -200,6 +225,7 @@ di.setDate(d)
 df.setDate(d)
 
 frameTop.hide()
+mainBar.hide()
 login.show()
 boxCr.addItems([''])
 boxServico.addItems([''])

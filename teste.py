@@ -6,12 +6,7 @@ app = qw.QApplication([])
 main = uic.loadUi('src/main.ui')
 set()
 
-tab = main.tableCons
-
-tab.setRowCount(1)
-
-for i in range(0, 14):
-    tab.setItem(0, i, qw.QTableWidgetItem(str('teste')))
+qf = qw.QFileDialog
 
 main.show()
 app.exec()
