@@ -1,12 +1,6 @@
-from PyQt5 import QtWidgets as qw, uic
-from qdarktheme import setup_theme as set
+import flet as ft
 
+def main(page: ft.Page):
+    ...
 
-app = qw.QApplication([])
-main = uic.loadUi('src/main.ui')
-set()
-
-qf = qw.QFileDialog
-
-main.show()
-app.exec()
+ft.app(main)

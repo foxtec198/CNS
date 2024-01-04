@@ -4,6 +4,7 @@ from time import strftime as st
 from pyodbc import connect
 from sqlite3 import connect as sq
 import json
+from openpyxl import load_workbook as lw
 
 class Consulta():
     def __init__(self):
@@ -141,14 +142,15 @@ class Consulta():
             self.tabela = cons.fetchall()
             self.addValueBarMain()
 
-            
+            # FILTRAR POR SERVIÇO
             if servico != '':
                 for row in self.tabela:
                     if servico == row[2]:
                         self.tabela = self.tabela
                     else:
                         self.tabela = None
-            # 14 COLUNAS 
+                        
+            # 14 COLUNAS - X LINHAS 
             if self.tabela != None:
                 x = 0
                 for i in self.tabela:
@@ -180,7 +182,15 @@ class Consulta():
         self.valorMain += 10
 
     def salvar(self):
-        ...
+        if tab.rowCount() != 0:
+            diretorio = QFile.getSaveFileName()
+            ws = lw(diretorio)
+            linha = 0
+            for row in self.tabela:
+                ...
+                
+        else:
+            self.msg(main, 'Primeiro realize uma consulta!', 3)
         
 app = qw.QApplication([])
 c = Consulta()
@@ -195,6 +205,7 @@ di = main.dataInicial
 tab = main.tableCons
 linhas = main.totalLinhas
 mainBar = main.mainBar
+QFile = qw.QFileDialog
 
 entry_saveUser = login.saveUser
 entry_server = login.entryServer
