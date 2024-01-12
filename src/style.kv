@@ -1,0 +1,48 @@
+<Login>:
+    name: 'login'
+    MDBoxLayout:
+        padding: 50
+        MDCard:
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDFloatLayout:
+                    id: loadFrame
+                    opacity: 0.0
+                    size_hint_max: None, 50
+                    MDLabel:
+                        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                        halign: 'center'
+                        text: "CARREGANDO..."
+                MDBoxLayout:
+                    orientation: 'horizontal'
+                    MDFloatLayout:
+                        FitImage:
+                            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                            source: 'src/img/login.png'
+                            size_hint: None, None
+
+                    MDFloatLayout:
+                        spacing: 10
+                        MDTextField:
+                            id: server
+                            icon_left: 'database-check-outline'
+                            size_hint: .5, None
+                            hint_text: 'Servidor'
+                            helper_text: 'Exemplo: 10.10.1.10'
+                            pos_hint: {'center_x': 0.5,'center_y': 0.6}
+                        MDTextField:
+                            id: user
+                            icon_left: 'account-circle'
+                            size_hint: .5, None
+                            hint_text: 'Usuário'
+                            helper_text: 'Exemplo: seu.usuario'
+                            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                        MDTextField:
+                            id: pwd
+                            icon_left: 'key-outline'
+                            size_hint: .5, None
+                            hint_text: 'Senha'
+                            password: True
+                            pos_hint: {'center_x': 0.5,'center_y': 0.4}
+                    
+            
