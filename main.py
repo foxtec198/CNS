@@ -139,29 +139,30 @@ class Consulta():
             AND YEAR(DISPONIBILIZACAO) >= {dataI[0]} 
             AND YEAR(DISPONIBILIZACAO) <= {dataF[0]} """)
             self.addValueBarMain()
-            self.tabela = cons.fetchall()
+            self.rowsTabela = cons.fetchall()
             self.addValueBarMain()
 
             # FILTRAR POR SERVIÇO
             if servico != '':
-                for row in self.tabela:
+                for row in self.rowsTabela:
                     if servico == row[2]:
-                        self.tabela = self.tabela
+                        self.tabela = self.rowsTabela
                     else:
                         self.tabela = None
                         
             # 14 COLUNAS - X LINHAS 
-            if self.tabela != None:
+            if self.rowsTabela != None:
                 x = 0
-                for i in self.tabela:
+                for i in self.rowsTabela:
                     x += 1
                     self.addValueBarMain()
                 tab.setRowCount(x)
                 linhas.setText(f'{x} Linhas')
                 row = 0
-                for r in self.tabela:
+                for item in self.rowsTabela:
                     for c in range(0,14):
-                        self.addTab(row, c, r[c])
+                        self.item = item
+                        self.addTab(row, c, item[c])
                     row += 1
                     self.addValueBarMain()
                 mainBar.hide()
@@ -183,12 +184,28 @@ class Consulta():
 
     def salvar(self):
         if tab.rowCount() != 0:
-            diretorio = QFile.getSaveFileName()
-            ws = lw(diretorio)
-            linha = 0
+            self.consulta()
+            direct = QFile.getSaveFileName(filter='*.xlsx')
+            caminho = direct[0]
+            open(f'caminho')
+            pl = lw(caminho)
+            ws = pl.active
             for row in self.tabela:
-                ...
-                
+                ws[f'A{row}'] = self.item[0]
+                ws[f'B{row}'] = self.item[1] 
+                ws[f'C{row}'] = self.item[2] 
+                ws[f'D{row}'] = self.item[3] 
+                ws[f'E{row}'] = self.item[4] 
+                ws[f'F{row}'] = self.item[5] 
+                ws[f'G{row}'] = self.item[6] 
+                ws[f'H{row}'] = self.item[7] 
+                ws[f'I{row}'] = self.item[8] 
+                ws[f'J{row}'] = self.item[9] 
+                ws[f'K{row}'] = self.item[10] 
+                ws[f'L{row}'] = self.item[11] 
+                ws[f'M{row}'] = self.item[12] 
+                ws[f'N{row}'] = self.item[13] 
+                pl.save(caminho)
         else:
             self.msg(main, 'Primeiro realize uma consulta!', 3)
         
