@@ -1,48 +1,73 @@
-<Login>:
-    name: 'login'
+<Login>
+    name: "loginWin"
     MDBoxLayout:
         padding: 50
         MDCard:
+            size_hint_min_y: 600
+            size_hint_min_x: 600
+            radius: 30
             MDBoxLayout:
-                orientation: 'vertical'
+                orientation: 'horizontal'
                 MDFloatLayout:
-                    id: loadFrame
-                    opacity: 0.0
-                    size_hint_max: None, 50
-                    MDLabel:
+                    size_hint_min_x: 300
+                    size_hint_min_y: 300
+                    FitImage:
                         pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                        source: 'src/img/login.png'
+                        size_hint: None, None
+                        size: 300, 300
+                MDFloatLayout:
+                    spacing: 30
+                    size_hint_min_x: 300
+                    size_hint_min_y: 300
+                    MDLabel:
+                        text: 'CNS - Consulta Facilitada'
                         halign: 'center'
-                        text: "CARREGANDO..."
-                MDBoxLayout:
-                    orientation: 'horizontal'
-                    MDFloatLayout:
-                        FitImage:
-                            pos_hint: {'center_x': 0.5,'center_y': 0.5}
-                            source: 'src/img/login.png'
-                            size_hint: None, None
-
-                    MDFloatLayout:
-                        spacing: 10
-                        MDTextField:
-                            id: server
-                            icon_left: 'database-check-outline'
-                            size_hint: .5, None
-                            hint_text: 'Servidor'
-                            helper_text: 'Exemplo: 10.10.1.10'
-                            pos_hint: {'center_x': 0.5,'center_y': 0.6}
-                        MDTextField:
-                            id: user
-                            icon_left: 'account-circle'
-                            size_hint: .5, None
-                            hint_text: 'Usuário'
-                            helper_text: 'Exemplo: seu.usuario'
-                            pos_hint: {'center_x': 0.5,'center_y': 0.5}
-                        MDTextField:
-                            id: pwd
-                            icon_left: 'key-outline'
-                            size_hint: .5, None
-                            hint_text: 'Senha'
-                            password: True
-                            pos_hint: {'center_x': 0.5,'center_y': 0.4}
-                    
-            
+                        pos_hint: {'center_x': 0.5,'center_y': 0.85}
+                    MDTextField:
+                        id: server
+                        icon_left: 'database-check-outline'
+                        size_hint: .8, None
+                        hint_text: 'Servidor'
+                        # helper_text: 'Exemplo: 10.10.1.10'
+                        pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    MDTextField:
+                        id: user
+                        icon_left: 'account-circle'
+                        size_hint: .8, None
+                        hint_text: 'Usuário'
+                        # helper_text: 'Exemplo: seu.usuario'
+                        pos_hint: {'center_x': 0.5,'center_y': 0.6}
+                    MDTextField:
+                        id: pwd
+                        icon_left: 'key-outline'
+                        size_hint: .8, None
+                        hint_text: 'Senha'
+                        password: True
+                        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                    MDIconButton:
+                        icon: 'eye'
+                        theme_text_color: 'Hint'
+                        pos_hint: {'center_x': 0.85,'center_y': 0.5}
+                        on_release:
+                            self.icon = 'eye-off' if self.icon == 'eye' else 'eye'
+                            pwd.password = False if pwd.password == True else True 
+                    MDSwitch:
+                        id: salvarUser
+                        pos_hint: {'center_x': 0.2,'center_y': 0.4}
+                    MDLabel:
+                        text: 'Salvar Usuario'
+                        halign: 'center'
+                        pos_hint: {'center_x': 0.5,'center_y': 0.4}
+                    MDFillRoundFlatIconButton:
+                        text: 'Logar'
+                        icon: 'login-variant'
+                        size_hint: .5, None
+                        pos_hint: {'center_x': 0.5,'center_y': 0.25}
+                        on_release:
+                            app.login()
+<Main>
+    name: 'mainWin'
+    MDFloatLayout:
+        MDData:
+            id: table
