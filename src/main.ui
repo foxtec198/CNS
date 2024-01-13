@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>img/icons8-lupa-48.png</normaloff>img/icons8-lupa-48.png</iconset>
+    <normaloff>img/3d-fluency-database-administrator.png</normaloff>img/3d-fluency-database-administrator.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
