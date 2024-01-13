@@ -29,7 +29,7 @@
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
     <property name="spacing">
      <number>0</number>
     </property>
@@ -210,6 +210,21 @@ border-radius: 20%;
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
               <widget class="QFrame" name="frame_2">
                <property name="frameShape">
@@ -220,7 +235,7 @@ border-radius: 20%;
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
                 <item>
-                 <widget class="QLabel" name="label_2">
+                 <widget class="QLabel" name="imgLogin">
                   <property name="minimumSize">
                    <size>
                     <width>230</width>
@@ -237,7 +252,7 @@ border-radius: 20%;
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>img/looney-mad-rocket.png</pixmap>
+                   <pixmap>img/techny-uploading-files-to-a-database.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -267,7 +282,20 @@ border-radius: 20%;
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_3">
+               <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item>
                  <widget class="QLabel" name="titulo">
                   <property name="font">
@@ -299,7 +327,7 @@ border: 0;
                  </widget>
                 </item>
                 <item>
-                 <spacer name="verticalSpacer_3">
+                 <spacer name="verticalSpacer_2">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
@@ -322,7 +350,7 @@ border: 0;
                   <property name="maximumSize">
                    <size>
                     <width>150</width>
-                    <height>40</height>
+                    <height>16777215</height>
                    </size>
                   </property>
                   <property name="font">
@@ -352,7 +380,7 @@ color: white;
                    <number>0</number>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                   </property>
                   <property name="dragEnabled">
                    <bool>true</bool>
@@ -409,7 +437,7 @@ color: white;
                    <number>0</number>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignCenter</set>
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                   </property>
                   <property name="dragEnabled">
                    <bool>true</bool>
@@ -466,7 +494,7 @@ color: white;
                    <number>0</number>
                   </property>
                   <property name="alignment">
-                   <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                   <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
                   </property>
                   <property name="dragEnabled">
                    <bool>true</bool>
@@ -503,13 +531,19 @@ color: white;
                     <height>20</height>
                    </size>
                   </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
                   <property name="font">
                    <font>
                     <family>MS Gothic</family>
                     <pointsize>10</pointsize>
-                    <weight>50</weight>
+                    <weight>75</weight>
                     <italic>false</italic>
-                    <bold>false</bold>
+                    <bold>true</bold>
                     <strikeout>false</strikeout>
                     <kerning>true</kerning>
                    </font>
@@ -517,16 +551,41 @@ color: white;
                   <property name="contextMenuPolicy">
                    <enum>Qt::DefaultContextMenu</enum>
                   </property>
+                  <property name="toolTip">
+                   <string>Para excluir usuario salvo, faça login com ele desmarcado!</string>
+                  </property>
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
                   <property name="styleSheet">
-                   <string notr="true">color: white;
+                   <string notr="true">justify-content: center;
+justify-items: center;
+text-align: center;
+align: center;
+color: white;
 border: 0;
 </string>
                   </property>
                   <property name="text">
                    <string>Salvar Usuario</string>
                   </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>23</width>
+                    <height>16</height>
+                   </size>
+                  </property>
                   <property name="shortcut">
                    <string>Ctrl+S</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -572,7 +631,7 @@ border: 0;
                  </widget>
                 </item>
                 <item>
-                 <spacer name="verticalSpacer_2">
+                 <spacer name="verticalSpacer_4">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
