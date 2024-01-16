@@ -187,13 +187,13 @@ background:black;}</string>
            <widget class="QFrame" name="MAIN_2">
             <property name="minimumSize">
              <size>
-              <width>500</width>
+              <width>600</width>
               <height>400</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>300</width>
+              <width>600</width>
               <height>400</height>
              </size>
             </property>
@@ -234,25 +234,25 @@ border-radius: 20%;
                 <enum>QFrame::Raised</enum>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_5">
-                <item>
+                <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                  <widget class="QLabel" name="imgLogin">
                   <property name="minimumSize">
                    <size>
                     <width>230</width>
-                    <height>280</height>
+                    <height>250</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>230</width>
-                    <height>280</height>
+                    <height>250</height>
                    </size>
                   </property>
                   <property name="text">
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>img/techny-uploading-files-to-a-database.png</pixmap>
+                   <pixmap>img/login2.png</pixmap>
                   </property>
                   <property name="scaledContents">
                    <bool>true</bool>
@@ -548,6 +548,9 @@ color: white;
                     <kerning>true</kerning>
                    </font>
                   </property>
+                  <property name="cursor">
+                   <cursorShape>ArrowCursor</cursorShape>
+                  </property>
                   <property name="contextMenuPolicy">
                    <enum>Qt::DefaultContextMenu</enum>
                   </property>
@@ -589,7 +592,7 @@ border: 0;
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignVCenter">
                  <widget class="QPushButton" name="btnLogin">
                   <property name="minimumSize">
                    <size>
@@ -605,11 +608,14 @@ border: 0;
                   </property>
                   <property name="font">
                    <font>
-                    <family>MS UI Gothic</family>
-                    <pointsize>12</pointsize>
+                    <family>Microsoft Yi Baiti</family>
+                    <pointsize>18</pointsize>
                     <weight>75</weight>
                     <bold>true</bold>
                    </font>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>PointingHandCursor</cursorShape>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">QPushButton{

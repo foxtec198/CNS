@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>img/3d-fluency-database-administrator.png</normaloff>img/3d-fluency-database-administrator.png</iconset>
+    <normaloff>img/icon.ico</normaloff>img/icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -60,7 +60,13 @@ border: 0;
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>100</height>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>90</height>
           </size>
          </property>
          <property name="styleSheet">
@@ -73,33 +79,20 @@ border: 0;
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="label">
+          <item alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="label_6">
             <property name="minimumSize">
              <size>
-              <width>50</width>
-              <height>50</height>
+              <width>80</width>
+              <height>80</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>100</width>
-              <height>100</height>
+              <width>80</width>
+              <height>80</height>
              </size>
             </property>
-            <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap>img/glare-artificial-intelligence-and-networks-with-clouds-1.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignLeft">
-           <widget class="QLabel" name="label_6">
             <property name="font">
              <font>
               <pointsize>14</pointsize>
@@ -109,25 +102,21 @@ border: 0;
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>CNS - Consulta Agilizada</string>
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>img/icon.ico</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
            </widget>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_5">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item>
            <widget class="QProgressBar" name="mainBar">
@@ -194,7 +183,7 @@ background: None;
                 <enum>QFrame::NoFrame</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="page">
                 <property name="geometry">
@@ -202,7 +191,7 @@ background: None;
                   <x>0</x>
                   <y>0</y>
                   <width>332</width>
-                  <height>298</height>
+                  <height>310</height>
                  </rect>
                 </property>
                 <property name="styleSheet">
@@ -446,12 +435,83 @@ border-radius: 20px;
                   <x>0</x>
                   <y>0</y>
                   <width>332</width>
-                  <height>298</height>
+                  <height>308</height>
                  </rect>
                 </property>
                 <attribute name="label">
                  <string>Configurações</string>
                 </attribute>
+                <layout class="QVBoxLayout" name="verticalLayout_5">
+                 <item>
+                  <widget class="QFrame" name="frame_7">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <item>
+                     <widget class="QLabel" name="label_10">
+                      <property name="minimumSize">
+                       <size>
+                        <width>80</width>
+                        <height>80</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>150</width>
+                        <height>150</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <pointsize>14</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>img/login.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="wordWrap">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="font">
+                    <font>
+                     <family>Tahoma</family>
+                     <pointsize>14</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Em atualização.. Logo Mais</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </widget>
              </item>
@@ -530,7 +590,7 @@ background: #333;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>img/icons8-borracha-100.png</normaloff>img/icons8-borracha-100.png</iconset>
+                    <normaloff>img/borracha.png</normaloff>img/borracha.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
@@ -550,7 +610,7 @@ background: #333;
                   </property>
                   <property name="icon">
                    <iconset>
-                    <normaloff>img/icons8-ms-excel-48.png</normaloff>img/icons8-ms-excel-48.png</iconset>
+                    <normaloff>img/excel.png</normaloff>img/excel.png</iconset>
                   </property>
                   <property name="iconSize">
                    <size>
