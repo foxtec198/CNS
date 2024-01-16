@@ -201,8 +201,8 @@ background: None;
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>315</width>
-                  <height>315</height>
+                  <width>332</width>
+                  <height>298</height>
                  </rect>
                 </property>
                 <property name="styleSheet">
@@ -212,6 +212,62 @@ background: None;
                  <string>Filtros</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="9" column="0" colspan="2">
+                  <widget class="QComboBox" name="boxServico">
+                   <property name="editable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0" colspan="2">
+                  <widget class="QLabel" name="label_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Contrato - CR *</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="0" colspan="2">
+                  <widget class="QComboBox" name="boxCr">
+                   <property name="editable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="8" column="0" colspan="2">
+                  <widget class="QLabel" name="label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Serviço</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDateEdit" name="dataInicial">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::NoButtons</enum>
+                   </property>
+                   <property name="correctionMode">
+                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                   </property>
+                  </widget>
+                 </item>
                  <item row="2" column="0">
                   <widget class="QLabel" name="label_9">
                    <property name="minimumSize">
@@ -231,18 +287,24 @@ background: None;
                    </property>
                   </widget>
                  </item>
-                 <item row="17" column="0" colspan="2">
-                  <spacer name="verticalSpacer">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="label_8">
+                   <property name="minimumSize">
                     <size>
-                     <width>20</width>
-                     <height>40</height>
+                     <width>70</width>
+                     <height>0</height>
                     </size>
                    </property>
-                  </spacer>
+                   <property name="maximumSize">
+                    <size>
+                     <width>70</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Data Final:</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="12" column="0" colspan="2">
                   <widget class="QPushButton" name="btnConsulta">
@@ -260,29 +322,23 @@ background: None;
                    </property>
                   </widget>
                  </item>
+                 <item row="16" column="0" colspan="2">
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
                  <item row="5" column="0" colspan="2">
                   <widget class="Line" name="line">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0">
-                  <widget class="QLabel" name="label_8">
-                   <property name="minimumSize">
-                    <size>
-                     <width>70</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>70</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Data Final:</string>
                    </property>
                   </widget>
                  </item>
@@ -308,92 +364,7 @@ background: None;
                    </property>
                   </widget>
                  </item>
-                 <item row="7" column="0" colspan="2">
-                  <widget class="QComboBox" name="boxCr">
-                   <property name="editable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="6" column="0" colspan="2">
-                  <widget class="QLabel" name="label_2">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Contrato - CR *</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="8" column="0" colspan="2">
-                  <widget class="QLabel" name="label_3">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Serviço</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="9" column="0" colspan="2">
-                  <widget class="QComboBox" name="boxServico">
-                   <property name="editable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QDateEdit" name="dataInicial">
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::NoButtons</enum>
-                   </property>
-                   <property name="correctionMode">
-                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QDateEdit" name="dataFinal">
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::NoButtons</enum>
-                   </property>
-                   <property name="correctionMode">
-                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="14" column="0" colspan="2">
-                  <widget class="QPushButton" name="btnpOpen">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Abrir Ultima Planilha Salva</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="15" column="0" colspan="2">
                   <widget class="QPushButton" name="btnLimpar">
                    <property name="minimumSize">
                     <size>
@@ -415,6 +386,22 @@ border-radius: 20px;
                    </property>
                    <property name="shortcut">
                     <string>Del</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDateEdit" name="dataFinal">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::NoButtons</enum>
+                   </property>
+                   <property name="correctionMode">
+                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
                    </property>
                   </widget>
                  </item>
