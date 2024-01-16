@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>img/3d-fluency-database-administrator.png</normaloff>img/3d-fluency-database-administrator.png</iconset>
+    <normaloff>img/icon.ico</normaloff>img/icon.ico</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>

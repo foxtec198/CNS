@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>893</width>
-    <height>511</height>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -183,7 +183,7 @@ background: None;
                 <enum>QFrame::NoFrame</enum>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="page">
                 <property name="geometry">
@@ -191,7 +191,7 @@ background: None;
                   <x>0</x>
                   <y>0</y>
                   <width>332</width>
-                  <height>310</height>
+                  <height>428</height>
                  </rect>
                 </property>
                 <property name="styleSheet">
@@ -201,46 +201,6 @@ background: None;
                  <string>Filtros</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
-                 <item row="9" column="0" colspan="2">
-                  <widget class="QComboBox" name="boxServico">
-                   <property name="editable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="6" column="0" colspan="2">
-                  <widget class="QLabel" name="label_2">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Contrato - CR *</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="7" column="0" colspan="2">
-                  <widget class="QComboBox" name="boxCr">
-                   <property name="editable">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="8" column="0" colspan="2">
-                  <widget class="QLabel" name="label_3">
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Serviço</string>
-                   </property>
-                  </widget>
-                 </item>
                  <item row="2" column="1">
                   <widget class="QDateEdit" name="dataInicial">
                    <property name="minimumSize">
@@ -295,7 +255,27 @@ background: None;
                    </property>
                   </widget>
                  </item>
-                 <item row="12" column="0" colspan="2">
+                 <item row="5" column="0" colspan="2">
+                  <widget class="Line" name="line">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="18" column="0" colspan="2">
+                  <spacer name="verticalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="13" column="0" colspan="2">
                   <widget class="QPushButton" name="btnConsulta">
                    <property name="minimumSize">
                     <size>
@@ -311,23 +291,59 @@ background: None;
                    </property>
                   </widget>
                  </item>
-                 <item row="16" column="0" colspan="2">
-                  <spacer name="verticalSpacer">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
+                 <item row="7" column="0" colspan="2">
+                  <widget class="QLabel" name="label_2">
+                   <property name="maximumSize">
                     <size>
-                     <width>20</width>
-                     <height>40</height>
+                     <width>16777215</width>
+                     <height>20</height>
                     </size>
                    </property>
-                  </spacer>
+                   <property name="text">
+                    <string>Contrato - CR *</string>
+                   </property>
+                  </widget>
                  </item>
-                 <item row="5" column="0" colspan="2">
-                  <widget class="Line" name="line">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
+                 <item row="8" column="0" colspan="2">
+                  <widget class="QComboBox" name="boxCr">
+                   <property name="editable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="0" colspan="2">
+                  <widget class="QLabel" name="label_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Serviço</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="10" column="0" colspan="2">
+                  <widget class="QComboBox" name="boxServico">
+                   <property name="editable">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDateEdit" name="dataFinal">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="buttonSymbols">
+                    <enum>QAbstractSpinBox::NoButtons</enum>
+                   </property>
+                   <property name="correctionMode">
+                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
                    </property>
                   </widget>
                  </item>
@@ -345,6 +361,13 @@ background: None;
                      <height>20</height>
                     </size>
                    </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="text">
                     <string>Periodo</string>
                    </property>
@@ -353,7 +376,7 @@ background: None;
                    </property>
                   </widget>
                  </item>
-                 <item row="14" column="0" colspan="2">
+                 <item row="15" column="0" colspan="2">
                   <widget class="QPushButton" name="btnLimpar">
                    <property name="minimumSize">
                     <size>
@@ -378,23 +401,7 @@ border-radius: 20px;
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="1">
-                  <widget class="QDateEdit" name="dataFinal">
-                   <property name="minimumSize">
-                    <size>
-                     <width>100</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::NoButtons</enum>
-                   </property>
-                   <property name="correctionMode">
-                    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="13" column="0" colspan="2">
+                 <item row="16" column="0">
                   <widget class="QLabel" name="lblPeriodo_2">
                    <property name="minimumSize">
                     <size>
@@ -427,6 +434,39 @@ border-radius: 20px;
                    </property>
                   </widget>
                  </item>
+                 <item row="12" column="0" colspan="2">
+                  <widget class="Line" name="line_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="0" colspan="2">
+                  <spacer name="verticalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="6" column="0" colspan="2">
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
                 </layout>
                </widget>
                <widget class="QWidget" name="page_2">
@@ -435,11 +475,11 @@ border-radius: 20px;
                   <x>0</x>
                   <y>0</y>
                   <width>332</width>
-                  <height>308</height>
+                  <height>428</height>
                  </rect>
                 </property>
                 <attribute name="label">
-                 <string>Configurações</string>
+                 <string>Tipos de Pesquisa</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_5">
                  <item>
