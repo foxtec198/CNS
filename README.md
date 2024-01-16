@@ -1,7 +1,7 @@
-> ![Logo](src/img/icon.ico) 
+![Logo](src/img/icon.ico) 
 > # **CNS - Consulta Facilitada**
 
-Bom pessoal o intuito deste aplicativo é auxiliar pessoas, que não entendem de SQL ou conexões profundas com o banco de dados,
+>Bom pessoal o intuito deste aplicativo é auxiliar pessoas, que não entendem de SQL ou conexões profundas com o banco de dados,
 a fazer consultas que o GPS Vista por si só não oferece em seu aplicativo, algo como fazer uma busca, mais detalhada e mais rapida afinal de contas,
 a aba de tarefas leva um tempo até carregar as informações !
 Lembrando que esse app é seguro e desenvolvido por mim _Guilherme Breve_, analista de projetos da empresa Grupo GPS.<br>
