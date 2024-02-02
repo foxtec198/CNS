@@ -184,27 +184,27 @@ class Consulta():
 
     def salvar(self):
         if tab.rowCount() != 0:
-            self.consulta()
+            linha = 3
             pl = lw('src/modelo.xlsx')
             ws = pl.active
-            linha = 3
-            for row in self.item:
-                ws[f'A{linha}'] = self.item[0]
-                ws[f'B{linha}'] = self.item[1] 
-                ws[f'C{linha}'] = self.item[2] 
-                ws[f'D{linha}'] = self.item[3] 
-                ws[f'E{linha}'] = self.item[4] 
-                ws[f'F{linha}'] = self.item[5] 
-                ws[f'G{linha}'] = self.item[6] 
-                ws[f'H{linha}'] = self.item[7]
-                ws[f'I{linha}'] = self.item[8] 
-                ws[f'J{linha}'] = self.item[9] 
-                ws[f'K{linha}'] = self.item[10] 
-                ws[f'L{linha}'] = self.item[11]
-                ws[f'M{linha}'] = self.item[12] 
-                ws[f'N{linha}'] = self.item[13] 
-                linha += 1
-            pl.save(QFile.getSaveFileName(filter='*.xlsx')[0])
+            if self.rowsTabela != None:
+                for i in self.rowsTabela:
+                    ws[f'A{linha}'] = i[0]
+                    ws[f'B{linha}'] = i[1] 
+                    ws[f'C{linha}'] = i[2] 
+                    ws[f'D{linha}'] = i[3] 
+                    ws[f'E{linha}'] = i[4] 
+                    ws[f'F{linha}'] = i[5] 
+                    ws[f'G{linha}'] = i[6] 
+                    ws[f'H{linha}'] = i[7]
+                    ws[f'I{linha}'] = i[8] 
+                    ws[f'J{linha}'] = i[9] 
+                    ws[f'K{linha}'] = i[10] 
+                    ws[f'L{linha}'] = i[11]
+                    ws[f'M{linha}'] = i[12] 
+                    ws[f'N{linha}'] = i[13] 
+                    linha += 1
+                pl.save(QFile.getSaveFileName(filter='*.xlsx')[0])
         else:
             self.msg(main, 'Primeiro realize uma consulta!', 3)
         
