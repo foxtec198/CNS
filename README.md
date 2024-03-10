@@ -49,5 +49,6 @@ Ele vai processar os filtros e retornar com o preenchimento da tabela ao lado.
 
 # Download
 ### Plataformas
-> Windows: [Baixe aqui](https://mega.nz/file/SZt21DLB#auqukxFMkOb0wP2XCLu582PLIZAGeRB5nKxPU3_ltkY)<br>
+> Windows: [Baixe aqui](InstaladorCNS.exe)
+
 > Android: [Em Breve]()
