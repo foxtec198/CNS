@@ -1,13 +1,17 @@
-![Logo](src/img/icon.ico) 
-> # **CNS - Consulta Facilitada**
+<img src="src/img/icon.ico" height="120px">
+
+# CNS - Consulta Facilitada
 
 >Bom pessoal o intuito deste aplicativo é auxiliar pessoas, que não entendem de SQL ou conexões profundas com o banco de dados,
-a fazer consultas que o GPS Vista por si só não oferece em seu aplicativo, algo como fazer uma busca, mais detalhada e mais rapida afinal de contas,
-a aba de tarefas leva um tempo até carregar as informações !
-Lembrando que esse app é seguro e desenvolvido por mim _Guilherme Breve_, analista de projetos da empresa Grupo GPS.<br>
-Porém também sou desenvolvedor a 3 anos, trabalho com BackEnd, FrontEnd, RPA's e automações comerciais !
+a fazer consultas que o GPS Vista por si só não oferece em seu aplicativo, algo como fazer uma busca, mais detalhada e mais rapida afinal de contas, a aba de tarefas leva um tempo até carregar as informações !
 
 ![Anim](src/img/animation.gif)<br>
+
+# Download
+|Plataformas| Links|
+|--|--|
+|Windows| [Baixe aqui](InstaladorCNS.exe)|
+|Android| [Em Breve]()|
 
 ## Login
 >[!IMPORTANT]
@@ -47,8 +51,6 @@ Ele vai processar os filtros e retornar com o preenchimento da tabela ao lado.
 ![Processando os Filtros](https://github.com/foxtec198/CNS/assets/64221923/38555d22-1c20-4b42-914a-6382b0b1fa07)
 ![Tabela](https://github.com/foxtec198/CNS/assets/64221923/fc101b8b-dbe1-47b6-a9e6-99368905e6ca)
 
-# Download
-### Plataformas
-> Windows: [Baixe aqui](InstaladorCNS.exe)
+Sendo assim gerando a tabela de forma dinamica com os filtros e detalhes fornecidos ao lado sem muita dor de cabeça.
 
-> Android: [Em Breve]()
+&copy; Guilherme Breve 2023
